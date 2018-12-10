@@ -79,6 +79,8 @@ bool Parsers::parseOBJ(std::string filename, std::vector<float>& vertices, std::
 				//for each face vertex
 				for (int i = 1; i < words.size(); i++) {
 
+					if (words[i] == "")
+						continue;
 					//check if face vertex has already been indexed
 					if (indices_map.count(words[i]) == 0) {
 					
