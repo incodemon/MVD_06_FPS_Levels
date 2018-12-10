@@ -47,12 +47,13 @@ bool Parsers::parseOBJ(std::string filename, std::vector<float>& vertices, std::
 
 			if (words[0] == "v") { //line contains vertex data
 				//read words to floats
-				int word_count = 1;
-				if (words[1] == "") word_count++;
+				int wn = 1;
+				if (words[1] == "")
+					wn = 2;
 
-				lm::vec3 pos( (float)atof( words[word_count++].c_str() ),
-					      (float)atof( words[word_count++].c_str() ),
-					      (float)atof( words[word_count++].c_str() ) );
+				lm::vec3 pos( (float)atof( words[wn].c_str() ),
+							  (float)atof( words[wn+1].c_str() ),
+							  (float)atof( words[wn+2].c_str() ) );
 				//add to temporary vector of positions
 				temp_vertices.push_back(pos);
 			}
