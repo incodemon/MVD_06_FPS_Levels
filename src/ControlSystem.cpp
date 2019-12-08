@@ -114,6 +114,20 @@ void ControlSystem::updateFPS(float dt) {
 	Collider& collider_right = colliders[FPS_collider_right];
 	Collider& collider_back = colliders[FPS_collider_back];
 
+    //tips:
+    // - look in controlsystem.h to see defined member variables
+    // - what is the current distance to the ground?
+    // - force player to always be FPS_height above ground
+    // - nerf y component of movement, why?
+    
+    
+    // if (input[GLFW_KEY_SPACE] == true) JUMP!
+    // start jump by translating by initial jump force * dt
+    // if already jumping, translate by jump force every frame - gravity
+    // slow-down jump force every frame until 0 (then gravity takes over)
+    
+
+    
 	lm::vec3 forward_dir = camera.forward.normalize() * move_speed_dt;
 	lm::vec3 strafe_dir = camera.forward.cross(lm::vec3(0, 1, 0)) * move_speed_dt;
 
