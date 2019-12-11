@@ -50,7 +50,7 @@ public:
 
 private:
 	float move_speed_ = 10.0f;
-	float turn_speed_ = 0.3f;
+	float turn_speed_ = 3.3f;
 
 	bool input[GLFW_KEY_LAST];
 

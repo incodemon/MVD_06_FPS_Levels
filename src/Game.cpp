@@ -107,8 +107,9 @@ void Game::init() {
     //******** AUTOMATIC LOADING **********//
     
 	//this is a simple level parser which reads a json file and loads it into the engine
-    Parsers::parseJSONLevel("data/assets/level4.json", graphics_system_);
-    
+   // Parsers::parseJSONLevel("data/assets/level4.json", graphics_system_);
+	
+	Parsers::parseJSONLevel("data/assets/Alex_level.json", graphics_system_);
 	//******** MANUAL LOADING **********//
 
 	// load a shader into the graphics system

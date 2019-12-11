@@ -429,7 +429,8 @@ namespace lm {
 		*this = *this * T;
 	}
 
-	// apply a 'local' rotation i.e. rotate object in local space before
+	// apply a 'local' rotation i.e. rotate object in local 
+	//before
 	// apply existing transformations
 	void mat4::rotateLocal(float angle_in_rad, const vec3& axis)
 	{
